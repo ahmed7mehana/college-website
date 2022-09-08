@@ -1,0 +1,235 @@
+
+:root{
+  --color-primary :#6c63ff ;
+  --color-success: #00bf8e ;
+  --color-warning:#f7c94b ;
+  --color-danger: #f75842 ;
+  --color-danger-variant:rgba( 247 , 88 , 66 , 0.4 ) ;
+  --color-white : #fff ;
+  --color-light :rgba( 255 , 255 , 255 , 0.7 ) ;
+  --color-black : #000 ;
+
+  --color-bg : #1f2641 ;
+  
+  --color-bgl : #2e3267 ;
+
+  --color-bg2 :#424890 ;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p{
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  line-height: 2.5;
+}
+
+/* Start Settings Box */
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #FFF;
+  width: 200px;
+  z-index: 1000;
+  min-height: 100vh;
+  transition: .3s;
+  border: 1px solid #EEE;
+}
+.settings-box.open {
+  left: 0;
+}
+.settings-box .toggle-settings {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  background-color: #FFF;
+  text-align: center;
+  cursor: pointer;
+}
+.settings-box .toggle-settings .fa-gear {
+  width: 30px;
+  padding: 8px 0;
+}
+.settings-box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #EEE;
+  margin: 10px;
+}
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+.settings-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0;
+}
+.settings-box .option-box .colors-list li {
+  width: 24px;
+  height: 24px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  border: 3px solid #EEE;
+}
+.settings-box .option-box .colors-list li.active {
+  border-color: #FFF;
+}
+.settings-box .option-box .colors-list li:first-child {
+  background-color: #FF9800;
+}
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #871ee9;
+}
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #009688;
+}
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #03A9F4;
+}
+.settings-box .option-box .colors-list li:nth-child(5) {
+  background-color: #4CAF50;
+}
+
+
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
+  width: 50px;
+  background-color: var(--main-color);
+  color: #FFF;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  opacity: .5;
+  cursor: pointer;
+}
+.settings-box .option-box span.active {
+  opacity: 1;
+}
+.settings-box .reset-options {
+  background-color: #F44336;
+  border: none;
+  width: 178px;
+  margin: 10px auto;
+  display: block;
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+} 
+/* End Settings Box */
+.head{
+  margin: auto;
+  text-align: center;
+  background:var(--color-bg2);
+  padding: 15px;
+  margin-top: 7rem;
+  border-radius: 30px;
+}
+.head h1{
+  text-align: center;
+  border-bottom: solid var(--color-bgl);
+  padding: 10px;
+  color: black;
+}
+.head p{
+  color: black;
+  font-size: 20px;
+  margin: auto;
+
+}
+
+
+.ques-one{
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  padding: 16px;
+  text-align: end;
+  margin-top: 30px;
+}
+.head-ques{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 94%;
+  padding: 0px 4px 0px 17px;
+  background: #03a9f4;
+  margin-bottom: 23px;
+  border-radius: 10px;
+}
+
+.accordion-item-body-content p{
+  padding: 14px;
+  background-color: var(--color-bgl);
+  border-radius: 10px;
+  font-size: 17.5px;
+  text-align: end;
+  line-height: 22.2px;
+  letter-spacing: 1.5px;
+}
+.accordion {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  background-color:var(--color-white);
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  width: 100%;
+}
+.accordion-item-header {
+  padding: 6px 5px 6px 1px;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  left: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  text-align: end;
+}
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
